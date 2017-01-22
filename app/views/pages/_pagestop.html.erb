@@ -1,0 +1,83 @@
+<section class="hero is-info is-medium">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">
+            <%= image_tag("logo.png") %>
+          </a>
+        </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+          <a class="nav-item is-active">
+            Home
+          </a>
+          <%= link_to "Styleguide", pages_styleguide_path, class: "nav-item" %>
+
+          <%= link_to "Mockups", pages_mockups_path, class: "nav-item" %>
+
+          <span class="nav-item">
+            <a href="http://guides.rubyonrails.org/" class="button is-primary ">
+              <span class="icon">
+                <i class="fa fa-code"></i>
+              </span>
+              <span>rails 5</span>
+            </a>
+          </span>
+
+          <span class="nav-item">
+            <a href="http://bulma.io" class="button is-primary ">
+              <span class="icon">
+                <i class="fa fa-css3"></i>
+              </span>
+              <span>bulma</span>
+            </a>
+          </span>
+          <span class="nav-item">
+            <a href="https://github.com/magiknono/magik" class="button is-primary is-inverted">
+              <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+              <span>github</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <% if current_page?(action: "mockups") %>
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Pages#mockups
+      </h1>
+      <h2 class="subtitle">
+        Find me in app/views/pages/mockups.html.erb
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Overview</a></li>
+          <li><a>Modifiers</a></li>
+          <li><a>Grid</a></li>
+          <li><a>Elements</a></li>
+          <li><a>Components</a></li>
+          <li><a>Layout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <% end %>
+</section>
